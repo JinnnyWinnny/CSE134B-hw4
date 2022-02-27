@@ -11,8 +11,9 @@
 * {
   font-family: "Lato", sans-serif;
 }
-h2 {
-  text-align: center;
+
+h3 {
+  font-weight: bold;
 }
 .wrapper {
   display: grid;
@@ -24,6 +25,7 @@ h2 {
   grid-area: 1 / 1 / 3 / 3;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 2rem;
 }
 
 .contact {
@@ -53,10 +55,18 @@ h2 {
 #container {
   margin-top: 3rem;
 }
+.resume-container {
+  padding: 2rem;
+  border-left: solid;
+}
+.portfolio-container {
+  margin-top: 5rem;
+}
 
 h2 {
   background-color: rgba(38, 187, 245, 0.8);
   color: black;
+  text-align: center;
 }
 
 .ani-bounce {
