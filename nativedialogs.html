@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Dialogs Page</title>
+  </head>
+  <body>
+    <h1>Simple Dialogs?</h1>
+    <button class="alert">Alert</button>
+    <button class="confirm">Confirm</button>
+    <button class="prompt">Prompt</button>
+    <button class="safer-prompt">Safer Prompt</button>
+
+    <hr />
+    <div id="msgBox" class="hidden">
+      <p class="msg"></p>
+    </div>
+  </body>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .msg {
+      width: 400px;
+      border-style: double;
+      border-color: black;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  </style>
+  <script>
+    const msgBox = document.querySelector("#msgBox");
+    const msg = document.querySelector(".msg");
+
+    const addOrRemoveHiddenClass = () => {
+      if (!msgBox.classList.contains("hidden")) {
+        msgBox.classList.add("hidden");
+      } else {
+        msgBox.classList.remove("hidden");
+      }
+    }
+
+    const alertBtn = document.querySelector(".alert");
+    alertBtn.addEventListener("click", () => {
+      addOrRemoveHiddenClass();
+      alert("Alert generated!!");
+    });
+
+    const confirmBtn = document.querySelector(".confirm");
+    confirmBtn.addEventListener("click", () => {
+      addOrRemoveHiddenClass();
+      let confirmClick = confirm("Confirm Button generated!");
+
+      msg.innerHTML = `The value returned by the confirm method is: ${confirmClick}`;
+    });
+
+    const promptBtn = document.querySelector(".prompt");
+    promptBtn.addEventListener("click", () => {
+      addOrRemoveHiddenClass();
+      const promptTxt = prompt("What is your name?");
+
+      msg.innerHTML = `The value returned by the prompt method is: ${promptTxt}`;
+    });
+  </script>
+</html>
