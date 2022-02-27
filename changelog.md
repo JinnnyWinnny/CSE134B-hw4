@@ -1,6 +1,10 @@
 ## Added
 - added a line to seperate two section in the middle (border left line)
 - added portfolio section to show more links to personal pages on the homepage left bottom section 
+- ### Added Google Analystics 
+   - Measure user engagement with my site or app
+   - Optimize my site or app experience
+   - Measure data across multiple devices or platforms
 
 ## Changed
 - Centering text of all the headers 
