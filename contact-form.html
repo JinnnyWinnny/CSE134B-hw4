@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Page</title>
+    <link href="styles/contact-form.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="styles/navbar.css" rel="stylesheet" />
+
+  </head>
+  <nav>
+    <input type="checkbox" id="nav-check" />
+    <h1 class="nav-header">Jenny</h2>
+    <div class="hamburger">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="./projects.html">Portfolio</a>
+      <a href="./contact-form.html">Contact</a>
+    </div>
+  </nav>
+
+    <section class="contact-form-container">
+
+      <h2>Contact ME!</h2>
+      <div class="wrapper">
+        <form>
+          <div class="form-group">
+            <label for="name"><b>Name </b></label>
+            <input
+              type="text"
+              id="name"
+              class="name"
+              placeholder="Name"
+              size="60"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email"><b>Email </b></label>
+            <input
+              type="text"
+              id="email"
+              class="name"
+              placeholder="Email"
+              size="60"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject"><b>Subject </b></label>
+            <input
+              type="text"
+              id="subject"
+              class="subject"
+              placeholder="Subject"
+              size="60"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message"><b>Message </b></label>
+            <textarea
+              id="message"
+              class="message"
+              rows="5"
+              cols="60"
+              placeholder="Please let me know what you're thinking my projects and portfolio..."
+            >
+            </textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="submit">
+              <i class="fa fa-paper-plane"></i>Send
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="contact-information">
+        <h3>Contact Information</h3>
+        <span class="address">
+          <strong>Address: </strong>9500 Gilman Dr, San Diego, CA<br />
+          <strong>Email: </strong>jinnywinny3@gmail.com
+        </span>
+      </div>
+    </section>
+  </body>
+</html>

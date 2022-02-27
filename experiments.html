@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW2 Extra Tags Experiment</title>
+  </head>
+  <body>
+    <section class="html-tag-experiments">
+      <h2>Experiment Sections</h3>
+
+      <div class="experiments">
+        <h3>Hello! This is HTML Tag Experiment section</h3>
+      </div>
+
+      <ol>
+        <li>
+          <h4>"aside" tag</h4>
+          <aside>
+            <h4>Aside Tag Experiment</h4>
+            <p>The aside tag defines some content aside from the content it is placed in.</p>
+          </aside>
+        </li>
+
+        <li>
+          <h4>"em" tag</h4>
+          <p>This is <em>em tag</em> experimnet. This tag is used to define emphasized text.</p>
+        </li>
+
+        <li>
+          <h4>"code" tag</h4>
+          <p>I love JavaScript's <code>map</code> manipulations and <code>filter</code> manipulations</p>
+        </li>
+
+        <li>
+          <h4>"pre" tag</h4>
+          <pre>This is the "pre" element experiment section. 
+            This preserves both     spaces and line
+            breakment. Super Interesting!
+          </pre>
+        </li>
+
+        <li>
+          <h4>"iframe" tag</h4>
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik" title="iFrame experiment from W3Schools Free Online Web Tutorials"></iframe>
+        </li>
+
+        <li>
+          <h4>"figure", "figcaption", "audio" tags</h4>
+          <figure>
+            <figcaption>Title: DDR clone by Hall of Fame</figcaption>
+            <audio
+                controls
+                src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3">
+            </audio>
+          </figure>
+        </li>
+
+        <li>
+          <h4>"video" tag</h4>
+          <video controls width="500">
+            <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4"/>
+          </video>
+        </li>
+
+        <li>
+          <h4>"canvas" tag</h4>
+          <canvas id="canvasExample"></canvas>
+          <script>
+            const canvasEl = document.getElementById('canvasExample');
+            const ctx=canvasEl.getContext('2d');
+            ctx.fillStyle='#e8e8e8';
+            ctx.fillRect(50,30,40,60);
+          </script>
+        </li>
+
+        <li>
+          <h4>"svg" tag</h4>
+          <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="blue" fill="purple">
+            <circle cx="50" cy="50" r="40" />
+            <circle cx="150" cy="50" r="4" />
+          </svg>
+        </li>
+
+        <li>
+          <h4>"optgroup" tag</h4>
+          <label for="favorite-food">Choose a food:</label>
+          <select id="favorite-food">
+              <optgroup label="Korean Foods">
+                  <option>Ramyun</option>
+                  <option>Kimchi Fried Rice</option>
+                  <option>Korean Crispy Chicken</option>
+              </optgroup>
+              <optgroup label="American Foods">
+                  <option>Hamburger</option>
+                  <option>Pizza</option>
+                  <option>Cheesy Hashbrown</option>
+              </optgroup>
+          </select>
+        </li>
+      </ol>
+      
+    </section>
+  </body>
+</html>

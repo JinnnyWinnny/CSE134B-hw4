@@ -1,0 +1,79 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&display=swap"); */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh7USew8.ttf)
+    format("truetype");
+}
+* {
+  font-family: "Lato", sans-serif;
+}
+h2 {
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 10rem;
+}
+.intro {
+  grid-area: 1 / 1 / 3 / 3;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.contact {
+  grid-area: 3 / 1 / 4 / 3;
+}
+.resume {
+  grid-area: 1 / 4 / 4 / 8;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+.first {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.second {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.third {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.fourth {
+  grid-area: 1 / 4 / 2 / 5;
+}
+#container {
+  margin-top: 3rem;
+}
+
+h2 {
+  background-color: rgba(38, 187, 245, 0.8);
+  color: black;
+}
+
+.ani-bounce {
+  animation: bounce 1s infinite;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
