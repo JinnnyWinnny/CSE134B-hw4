@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple CRUD</title>
+  </head>
+  <body>
+    <h1>Welcome to Jenny's Blog</h1>
+    <div class="postings">
+      <ul class="blog-posts"></ul>
+    </div>
+    <button class="add-blog">Add Blog Post</button>
+    <button class="update-blog">Update</button>
+    <button class="delete-blog">Delete</button>
+
+    <dialog close class="add-dialog">
+      <h3>Add your Blog Posting!</h3>
+      <form id="add-form">
+        <label for="title">Post Title</label>
+        <br>
+        <input type="text" id="title" class="title" size="60">
+        <br>
+        <label for="summary">Summary</label>
+        <br>
+        <textarea id="summary" class="summary" rows="5" cols="60"></textarea> 
+        <br>
+        <br>
+        <button type="button" class="cancel">
+          Cancel
+        </button>
+        <button type="button" class="submit">
+          Submit
+        </button>
+      </form>
+    </dialog>
+
+    <dialog close class="update-dialog">
+    </dialog>
+
+    <dialog close class="delete-dialog">
+    </dialog>
+  </body>
+
+  <script type="module" src="blog.js"></script>
+</html>

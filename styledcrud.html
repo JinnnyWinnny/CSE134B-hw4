@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled CRUD</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">  </head>
+  <body>
+    <h1>Welcome to Jenny's Blog</h1>
+    <div class="postings">
+      <ul class="blog-posts"></ul>
+    </div>
+    <button class="add-blog">Add Blog Post<span class="material-icons">add</span></button>
+    <button class="update-blog">Update     <span class="material-icons">edit</span>
+    </button>
+
+    <button class="delete-blog">Delete <span class="material-icons">delete</span></button>
+
+    <dialog close class="add-dialog">
+      <h3 id="add-post">Add your Blog Posting!</h3>
+      <form id="add-form">
+        <label for="title" id="add-title">Post Title</label>
+        <br>
+        <input type="text" id="title" class="title" size="60">
+        <br>
+        <label for="summary" id="summary-title">Summary</label>
+        <br>
+        <textarea id="summary" class="summary" rows="5" cols="60"></textarea> 
+        <br>
+        <br>
+        <button type="button" class="cancel">
+          Cancel
+        </button>
+        <button type="button" class="submit">
+          Submit
+        </button>
+      </form>
+    </dialog>
+
+    <dialog close class="update-dialog">
+    </dialog>
+
+    <dialog close class="delete-dialog">
+    </dialog>
+  </body>
+
+  <script type="module" src="blog.js"></script>
+  <script type="module" src="styledcrud.js"></script>
+
+</html>
