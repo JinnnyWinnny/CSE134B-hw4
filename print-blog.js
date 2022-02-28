@@ -6,12 +6,11 @@ export function printBlog(blogs) {
   const blogPosts = document.querySelector(".blog-posts");
 
   if (blogs.length == 0) {
-    blogPosts.remove();
     updateBlogBtn.remove();
     deleteBlogBtn.remove();
 
     const zeroPost = `
-      <p>No blogs currently posted</p>
+      <p class="no-blog-prompt">No blogs currently posted</p>
     `;
 
     postingDiv.insertAdjacentHTML("beforeend", zeroPost);

@@ -32,7 +32,13 @@ localStorage.setItem("blogPostings", JSON.stringify(initialBlogPostings));
 
 printBlog(initialBlogPostings);
 
-addBlogBtn.addEventListener("click", addBlog);
+addBlogBtn.addEventListener("click", () => {
+  const noBlogPrompt = document.querySelector(".no-blog-prompt");
+
+  if (noBlogPrompt) noBlogPrompt.remove();
+
+  addBlog();
+});
 
 updateBlogBtn.addEventListener("click", () => {
   const updateDialog = document.querySelector(".update-dialog");
