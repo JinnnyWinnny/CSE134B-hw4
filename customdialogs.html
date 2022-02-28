@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.8/purify.min.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Dialogs Page</title>
+  </head>
+  <body>
+    <h1>Custom Dialogs</h1>
+    <button class="alert">Alert</button>
+    <button class="confirm">Confirm</button>
+    <button class="prompt">Prompt</button>
+
+    <hr />
+    <div id="msgBox" class="hidden">
+      <p class="msg"></p>
+    </div>
+
+    <dialog close class="alert-dialog">
+      <h3>Alert Pressed!</h3>
+      <button class="alert-ok">OK</button>
+    </dialog>
+
+    <dialog close class="confirm-dialog">
+      <h3>Do you confirm this?</h3>
+      <button class="confirm-ok">OK</button>
+      <button class="confirm-cancel">Cancel</button>
+    </dialog>
+
+    <dialog close class="prompt-dialog">
+      <h3>What is your name?</h3>
+      <form id="prompt-form" action="javascript:void(0)">
+        <label for="input">What is your name?</label>
+        <input type="text" id="input" name="input" />
+        <!-- <output name="result" for="input" id="output"></output> -->
+        <br /><br />
+        <button type="submit" class="prompt-ok">OK</button>
+        <button class="prmopt-cancel">Cancel</button>
+      </form>
+    </dialog>
+  </body>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .msg {
+      width: 400px;
+      border-style: double;
+      border-color: black;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  </style>
+  <script type="module" src="customdialog.js"></script>
+</html>
