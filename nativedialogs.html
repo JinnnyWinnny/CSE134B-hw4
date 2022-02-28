@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.8/purify.min.js"></script>
+
     <meta charset="utf-8" />
     <meta name="description" content="Personal Portfolio" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
@@ -16,8 +18,8 @@
     <button class="safer-prompt">Safer Prompt</button>
 
     <hr />
-    <div id="msgBox" class="hidden">
-      <p class="msg"></p>
+    <div id="msgBox" class="">
+      <output class=""></output>
     </div>
   </body>
 
@@ -27,46 +29,89 @@
     }
 
     .msg {
-      width: 400px;
       border-style: double;
       border-color: black;
       text-align: center;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px;
     }
   </style>
   <script>
     const msgBox = document.querySelector("#msgBox");
-    const msg = document.querySelector(".msg");
+    const msg = document.querySelector("output");
+    var confirmClick = "";
+    let show = false;
 
-    const addOrRemoveHiddenClass = () => {
-      if (!msgBox.classList.contains("hidden")) {
-        msgBox.classList.add("hidden");
+    // control_box();
+    const control_box = () => {
+      if (show) {
+        msg.classList.remove("hidden");
+        msg.classList.add("msg");
       } else {
-        msgBox.classList.remove("hidden");
+        msg.classList.add("hidden");
       }
-    }
-
+      msg.innerHTML = `The value returned by the confirm method is: ${confirmClick}`;
+    };
     const alertBtn = document.querySelector(".alert");
     alertBtn.addEventListener("click", () => {
-      addOrRemoveHiddenClass();
-      alert("Alert generated!!");
+      // addOrRemoveHiddenClass();
+      show = false;
+      control_box();
+      // alert("Alert generated!!");
+      setTimeout(() => {
+        alert("Alert generated!!"), 100000;
+      });
     });
+    const confirm_box = () => {
+      confirmClick = confirm("Confirm Button generated!");
+      show = true;
+      control_box();
+    };
+    const name_box = () => {
+      confirmClick = prompt("What is your name?");
+      show = true;
+      control_box();
+    };
+    const sf_name_box = () => {
+      confirmClick = prompt(
+        "What is your name?",
+        '<b onmouseover="alert("pwned")">Rolled me</b>'
+      );
+      confirmClick = DOMPurify.sanitize(confirmClick);
+      show = true;
+      control_box();
+    };
 
     const confirmBtn = document.querySelector(".confirm");
     confirmBtn.addEventListener("click", () => {
-      addOrRemoveHiddenClass();
-      let confirmClick = confirm("Confirm Button generated!");
+      show = false;
+      control_box();
 
-      msg.innerHTML = `The value returned by the confirm method is: ${confirmClick}`;
+      setTimeout(() => {
+        confirm_box(), 50000;
+      });
     });
 
     const promptBtn = document.querySelector(".prompt");
     promptBtn.addEventListener("click", () => {
-      addOrRemoveHiddenClass();
-      const promptTxt = prompt("What is your name?");
+      show = false;
+      control_box();
 
-      msg.innerHTML = `The value returned by the prompt method is: ${promptTxt}`;
+      // msgBox.insertAdjacentHTML("beforeend", output);
+      setTimeout(() => {
+        name_box(), 100000;
+      });
+      // msg.innerHTML = `The value returned by the prompt method is: ${promptTxt}`;
+    });
+    const sf_promptBtn = document.querySelector(".safer-prompt");
+    sf_promptBtn.addEventListener("click", () => {
+      show = false;
+      control_box();
+
+      // msgBox.insertAdjacentHTML("beforeend", output);
+      setTimeout(() => {
+        sf_name_box(), 100000;
+      });
+      // msg.innerHTML = `The value returned by the prompt method is: ${promptTxt}`;
     });
   </script>
 </html>
